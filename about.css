@@ -1,0 +1,457 @@
+@font-face {
+  font-family: 'BasementGrotesque';
+  src: url('assets/BasementGrotesque-Black_v1.202.otf') format('woff2');
+  font-weight: bold;
+  font-style: bold;
+}
+
+
+
+*{
+  color: #4c4c4c;
+}
+
+body {
+  font-family: "Basement Grotesque", sans-serif;
+  color: #4C4C4C;
+}
+
+body.no-scroll {
+  overflow: hidden;
+  height: 100vh;
+}
+
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: 40px;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 16px;
+  font-family: 'BasementGrotesque', sans-serif;
+}
+
+.logo a{
+    text-decoration: none;
+    color: #4c4c4c;
+}
+
+.navSec2 {
+  display: flex;
+  margin-left: auto;
+  gap: 40px;
+  font-size: 12px;
+}
+
+.navSec2 a {
+  text-decoration: none;
+  color: #333;
+  font-weight: normal;
+  transition: grey 0.3s ease;
+}
+
+.navSec2 a:hover {
+  color: #4D6BFE;
+}
+
+/* Hamburger menu - hidden by default */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  z-index: 100;
+  position: relative; /* updated */
+}
+
+/* When menu is active (make it fixed) */
+.hamburger.active {
+position: fixed;
+right: 24px;
+z-index: 101; /* stay on top of menu */
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  transition: all 0.3s ease;
+}
+
+
+/* Mobile menu styles */
+@media (max-width: 768px) {
+  nav{
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  /* Hide desktop navigation */
+  .navSec2 {
+    font-size: 15px;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    background-color: #FAFAFA;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2rem;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+    z-index: 90;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+  .logo {
+    font-weight: bold;
+    font-size: 16px;
+    font-family: 'BasementGrotesque', sans-serif;
+  }
+
+  /* When menu is active */
+  .navSec2.active {
+    right: 0;
+    align-items: center;
+  }
+
+  /* Hamburger animation */
+  .hamburger.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+
+.about{
+  display: flex;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: 60px;
+  gap: 60px;
+}
+
+.aboutDesription{
+  margin: auto;
+  width: 2800px;
+}
+
+.aboutDesription .descriptionP1, .descriptionP2{
+  line-height: 26px;
+  font-weight: normal;
+}
+
+.aboutDesription h1{
+  margin: auto;
+  font-size: 48px;
+  font-weight: 500;
+}
+
+.profilePic img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* object-position: center; */
+}
+
+.aboutDesription .descriptionP3{
+  margin-top: 24px;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.descriptionTools p {
+  margin: 0;      /* Removes default margin */
+  padding: 0;     /* Removes default padding */
+  /* line-height: 1.2; Adjust line height to reduce space further if needed */
+}
+
+.descriptionConnect p {
+  margin: 0;      /* Removes default margin */
+  padding: 0;     /* Removes default padding */
+  /* line-height: 1.2; Adjust line height to reduce space further if needed */
+}
+
+.descriptionTools {
+  margin-bottom: 24px; /* Adds 24px gap below descriptionTools */
+}
+
+.descriptionConnect .email{
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.descriptionConnect .email a{
+  color: #4D6BFE;
+}
+
+.aboutDesription .descriptionP2 a{
+  color: #4D6BFE;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+  .about{
+      display: block;
+      margin: auto;
+      margin-top: 60px;
+      margin-left: 16px;
+      margin-right: 16px;
+  }
+
+  .profilePic{
+      width: 100%;
+      height: 100%;
+  }
+
+  .aboutDesription{
+      margin: auto;
+      margin-top: 24px;
+      width: 100%;
+      font-size: 13px;
+  }
+
+  .aboutDesription h1{
+      font-size: 32px;
+      font-weight: bold;
+  }
+
+  .aboutDesription .descriptionP1, .descriptionP2{
+    line-height: 26px;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.descriptionP3, .descriptionTools, .descriptionConnect{
+  font-size: 15px;
+}
+
+.descriptionTools{
+  font-weight: bold;
+}
+
+  .descriptionConnect .email{
+      font-size: 20px;
+      font-weight: bold;
+  }
+} 
+
+
+
+
+/* footer */
+.fooTer{
+  margin-bottom: 40px;
+  margin-top: 120px;
+  color: #4C4C4C;
+  margin-top: 60px;
+}
+
+
+.footerText{
+  font-size: 48px;
+  font-weight: 500;
+  text-align: center;
+  margin-right: 60px;
+  margin-left: 60px;
+  margin-top: 60px;
+}
+
+.landingpageHr{
+  margin-right: 60px;
+  margin-left: 60px;
+  margin-top: 130px;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+  .fooTer{
+      margin-top: 90px;
+      margin-bottom: 30px;
+  }
+
+  .footerText {
+    font-size: 20px;
+    text-align: center;
+    font-weight: normal;
+    margin-left: 16px;
+    margin-right: 16px;
+    font-weight: bold;
+  }
+
+  .landingpageHr{
+      margin-top: 30px;
+      margin-bottom: 30px;
+      margin-right: 16px;
+      margin-left: 16px;
+  }
+}
+
+/* FOOTER CONTINUATION */
+.footer{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 60px;
+  margin-right: 60px;
+  margin-left: 60px;
+}
+
+.footer .copyright{
+  font-size: 15px;
+}
+
+.footer .socials{
+  display: flex;
+  font-size: 15px;
+  text-decoration: none;
+  /* flex-direction: column; */
+  gap: 16px;
+  text-align: center;
+}
+
+.footer .socials a .fullText:hover{
+color: #4D6BFE;
+}
+
+.footer .foterBacktotop a{
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.footer .socials a:hover{
+color: #4D6BFE;
+}
+
+.shortText {
+  display: none;
+}
+
+/* RESPONSIVENESS */
+@media (max-width: 768px) {
+  .footer{
+      margin-left: 16px;
+      margin-right: 16px;
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+  .full-text {
+      display: none;
+    }
+    .short-text {
+      display: inline;
+    }
+  
+  .footerText {
+    font-size: 17px;
+    text-align: center;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 30px;
+  }
+
+  .footer .copyright{
+      font-size: 12px;
+  }
+
+  .footer .socials{
+      display: flex;
+      font-size: 12px;
+      gap: 8px;
+      text-decoration: none;
+      /* flex-direction: column; */
+  }
+
+      /* SHORTEN SOCIALS */
+  .socials .shortText {
+    display: inline;
+  }
+
+  .footer .socials a .shortText:hover{
+    color: #4D6BFE;
+  }
+  
+  .socials .fullText {
+    display: none;
+  }
+
+  .footer .foterBacktotop a{
+      font-size: 12px;
+      text-decoration: none;
+      display: flex;
+  }
+}
+
+/* RESPONSIVENESS */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about{
+      display: block;
+      margin: auto;
+      margin-top: 60px;
+      margin-left: 60px;
+      margin-right: 60px;
+  }
+
+  .profilePic{
+      width: 100%;
+      height: 100%;
+  }
+
+  .aboutDesription{
+      margin: auto;
+      margin-top: 24px;
+      width: 100%;
+      /* font-size: 13px; */
+  }
+}
+
+/* Animation */
+.fade-out-up {
+animation: fadeOutUp 0.6s forwards;
+}
+
+@keyframes fadeOutUp {
+0% {
+  opacity: 1;
+  transform: translateY(0);
+}
+100% {
+  opacity: 0;
+  transform: translateY(-50px);
+}
+}
+
+/* Initial state */
+.aboutDesription h1,
+.aboutDesription .email {
+opacity: 0;
+transform: translateY(40px);
+}
+
+/* Animate in */
+.aboutDesription h1.animate-in,
+.aboutDesription .email.animate-in {
+opacity: 1;
+transform: translateY(0);
+transition: opacity 0.8s ease, transform 0.8s ease;
+}
